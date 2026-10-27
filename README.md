@@ -4,10 +4,9 @@ Signed macOS and Windows installers and update metadata for Dataplicity Files.
 Application source code is maintained separately; customers need no GitHub account
 or token to download a published installer.
 
-As of 27 October 2026, this repository has qualification prereleases and no
-general stable release. The `/releases/latest/download/` URLs below become usable
-only after an approved stable release publishes all three installers and aliases.
-Do not substitute a qualification build for a stable download.
+Stable [Files 0.4.36](https://github.com/wildfoundry/dataplicity-files-releases/releases/tag/files-stable-v0.4.36)
+was published on 27 October 2026 with all three supported installers and stable
+aliases. Qualification prereleases remain separate from the stable channel.
 
 ## macOS
 
@@ -19,7 +18,7 @@ the supported Files release contract.
 
 ## Windows
 
-Files supports Windows 11. Once a stable release is available, choose **x64** for
+Files supports Windows 11. Choose **x64** for
 Intel or AMD PCs and **ARM64** for Windows on Arm from
 [Releases](https://github.com/wildfoundry/dataplicity-files-releases/releases).
 Windows should identify the verified publisher as **Wildfoundry Ltd**.
@@ -88,8 +87,8 @@ python3 scripts/check_downloads.py --verify-bytes  # also download and hash inst
 python3 scripts/check_downloads.py --tag files-stable-vX.Y.Z --verify-bytes
 ```
 
-The script currently fails with "No public stable release exists". That is the
-expected distribution blocker, even when signing/build workflows are green.
+If no stable release exists, the script fails with "No public stable release
+exists". Signing/build success alone does not establish download availability.
 
 ## Rollback and recovery
 
